@@ -713,7 +713,7 @@ function App() {
         {/*  Education Information Section*/}
         <div class="bg-white rounded-lg shadow-lg p-6 space-y-8">
           <h2 class="text-2xl font-bold mb-6">Education Information</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-4">
+          <div class="grid grid-cols-3 md:grid-cols-3 gap-x-6 gap-y-4">
             {/* High School Name And Location*/}
             <div class="space-y-2">
               <form.Field
@@ -801,7 +801,7 @@ function App() {
                 children={(field) => {
                   return (
                     <>
-                      <label for={field.name} class='text-sm font-medium mb-1 block'>College or Technical School</label>
+                      <label for={field.name} class='text-sm font-medium mb-1 block'>College/Tech School</label>
                       <input
                         id={field.name}
                         name={field.name}
@@ -867,7 +867,7 @@ function App() {
               />
             </div>
             {/* College or Technical School Subject Studied */}
-            <div class="space-y-2 md:col-span-3">
+            <div class="space-y-2 col-span-3 md:col-span-3">
               <form.Field
                 name="collegeOrTechnicalSchoolSubjectStudied"
                 children={(field) => {
@@ -967,7 +967,7 @@ function App() {
               />
             </div>
             {/* CCP/CDA School Subject Studied */}
-            <div class="space-y-2 md:col-span-3">
+            <div class="space-y-2 col-span-3 md:col-span-3">
               <form.Field
                 name="ccpCdaSubjectStudied"
                 children={(field) => {

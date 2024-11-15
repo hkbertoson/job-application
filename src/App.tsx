@@ -61,7 +61,7 @@ function FieldInfo(props: FieldInfoProps) {
     <>
       {props.field.state.meta.isTouched &&
         props.field.state.meta.errors.length ? (
-        <em>{props.field.state.meta.errors.join(',')}</em>
+        <em class='text-red-800'>{props.field.state.meta.errors.join(',')}</em>
       ) : null}
       {props.field.state.meta.isValidating ? 'Validating...' : null}
     </>
@@ -91,7 +91,7 @@ function App() {
               <form.Field
                 name="firstName"
                 validators={{
-                  onChange: ({ value }) => !value ? 'First Name is required' : null
+                  onSubmit: ({ value }) => !value ? 'First Name is required' : null
                 }}
                 children={(field) => {
                   return (
@@ -118,7 +118,7 @@ function App() {
               <form.Field
                 name="lastName"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Last Name is required' : null
+                  onSubmit: ({ value }) => !value ? 'Last Name is required' : null
                 }}
                 children={(field) => {
                   return (
@@ -143,7 +143,7 @@ function App() {
               <form.Field
                 name="email"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Email is required' : null
+                  onSubmit: ({ value }) => !value ? 'Email is required' : null
                 }}
                 children={(field) => {
                   return (
@@ -169,7 +169,7 @@ function App() {
               <form.Field
                 name="phoneNumber"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Phone Number is required' : null
+                  onSubmit: ({ value }) => !value ? 'Phone Number is required' : null
                 }}
                 children={(field) => {
                   return (
@@ -218,7 +218,7 @@ function App() {
               <form.Field
                 name="dateOfBirth"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Date of Birth is required' : null
+                  onSubmit: ({ value }) => !value ? 'Date of Birth is required' : null
                 }}
                 children={(field) => {
                   return (
@@ -244,7 +244,7 @@ function App() {
               <form.Field
                 name="driversLicenseNumber"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Drivers License/State ID is required' : null
+                  onSubmit: ({ value }) => !value ? 'Drivers License/State ID is required' : null
                 }}
                 children={(field) => {
                   return (
@@ -375,7 +375,7 @@ function App() {
               <form.Field
                 name="streetAddress"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Street Address is Required' : null
+                  onSubmit: ({ value }) => !value ? 'Street Address is Required' : null
                 }}
                 children={(field) => {
                   return (
@@ -399,7 +399,7 @@ function App() {
               <form.Field
                 name="city"
                 validators={{
-                  onChange: ({ value }) => !value ? 'City is Required' : null
+                  onSubmit: ({ value }) => !value ? 'City is Required' : null
                 }}
                 children={(field) => {
                   return (
@@ -423,7 +423,7 @@ function App() {
               <form.Field
                 name="zipCode"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Zip Code is Required' : null
+                  onSubmit: ({ value }) => !value ? 'Zip Code is Required' : null
                 }}
                 children={(field) => {
                   return (
@@ -454,7 +454,7 @@ function App() {
               <form.Field
                 name="positionDesired"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Position Desired is Required' : null
+                  onSubmit: ({ value }) => !value ? 'Position Desired is Required' : null
                 }}
                 children={(field) => {
                   return (
@@ -479,7 +479,7 @@ function App() {
               <form.Field
                 name="desiredSalary"
                 validators={{
-                  onChange: ({ value }) => !value ? ' Desired Salary is Required' : null
+                  onSubmit: ({ value }) => !value ? ' Desired Salary is Required' : null
                 }}
                 children={(field) => {
                   return (
@@ -504,7 +504,7 @@ function App() {
               <form.Field
                 name="startDate"
                 validators={{
-                  onChange: ({ value }) => !value ? 'Start Date is Required' : null
+                  onSubmit: ({ value }) => !value ? 'Start Date is Required' : null
                 }}
                 children={(field) => {
                   return (
@@ -1244,7 +1244,6 @@ function App() {
             </div>
           </div>
         </div>
-
         {/* References */}
         <div class="bg-white rounded-lg shadow-lg p-6 space-y-8">
           <h2 class="text-2xl font-bold mb-6">References (Not related to you)</h2>
@@ -1354,7 +1353,6 @@ function App() {
             )}
           </form.Field>
         </div>
-
         {/* Signature */}
         <div class="bg-white rounded-lg shadow-lg p-6 space-y-8">
           <h2 class="text-2xl font-bold mb-6">Electronic Signature</h2>
